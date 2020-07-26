@@ -14,3 +14,4 @@ source $ZSH/oh-my-zsh.sh
 
 # Aliases
 alias zshconfig="vim ~/.zshrc"
+alias fd="fdfind"

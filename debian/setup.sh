@@ -60,8 +60,7 @@ fi
 if ! command -v zsh > /dev/null; then
   print_header "Installing zsh..."
   install zsh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   cp ../.zshrc ~/.zshrc
 fi
-
 

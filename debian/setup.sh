@@ -48,7 +48,7 @@ fi
 
 # Install ripgrep
 
-if ! command -v ripgrep > /dev/null; then
+if ! command -v rg > /dev/null; then
   print_header "Installing ripgrep..."
   install ripgrep
 fi

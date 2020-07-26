@@ -1,5 +1,10 @@
 #!/bin/sh
 
+print_header()
+{
+  echo "####### $1 #######"
+}
+
 # Update apt packages
 
 print_header "Update apt packages..." 
@@ -37,7 +42,3 @@ if ! command -v mosh > /dev/null; then
   sudo apt-get install mosh
 fi
 
-print_header()
-{
-  echo "####### $1 #######"
-}

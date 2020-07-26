@@ -38,7 +38,7 @@ echo "Host *
 4. Test your connection to GitHub
 
 ```bash
-echo "y" | ssh -T git@github.com
+echo "yes" | ssh -T git@github.com
 ```
 
 Your should see something similar to

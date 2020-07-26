@@ -34,7 +34,7 @@ fi
 
 # Install fd
 
-if ! command -v fd > /dev/null; then
+if ! command -v fdfind > /dev/null; then
   print_header "Installing fd..."
   install fd-find
 fi

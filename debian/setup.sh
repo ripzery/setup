@@ -36,7 +36,7 @@ fi
 
 if ! command -v fd > /dev/null; then
   print_header "Installing fd..."
-  install fd
+  install fd-find
 fi
 
 # Install fzf

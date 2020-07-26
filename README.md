@@ -50,7 +50,7 @@ Hi ripzery! You've successfully authenticated, but GitHub does not provide shell
 5. Clone this repo
 
 ```bash
-mkdir workspace && cd workspace
+mkdir ~/workspace && cd ~/workspace
 git clone git@github.com:ripzery/setup.git && cd setup
 ```
 

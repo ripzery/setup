@@ -30,11 +30,9 @@ Copy & paste your public key at https://github.com/settings/keys
 3. Add ssh key to agent permanently
 
 ```bash
-echo "
-Host *
+echo "Host *
   AddKeysToAgent yes
-  IdentityFile ~/.ssh/gh_id_rsa
-" > ~/.ssh/config
+  IdentityFile ~/.ssh/gh_id_rsa" > ~/.ssh/config
 ```
 
 4. Test your connection to GitHub

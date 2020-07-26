@@ -55,12 +55,20 @@ if ! command -v curl > /dev/null; then
   install curl
 fi
 
+# Install fzf
+
+if ! command -v fzf > /dev/null; then
+  print_header "Installing fzf..."
+  install fzf
+fi
+
 # Install zsh
 
 if ! command -v zsh > /dev/null; then
   print_header "Installing zsh..."
   install zsh
   yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
   cp ../.zshrc ~/.zshrc
 fi
 

@@ -32,6 +32,38 @@ if ! command -v curl > /dev/null; then
   install curl
 fi
 
+# Install Mosh server
+
+if ! command -v mosh > /dev/null; then
+  ## Enable firewall over UDP ports
+  echo "*filter" > /etc/iptables.firewall.rules
+  echo "-A INPUT -p udp --dport 60000:61000 -j ACCEPT" >> /etc/iptables.firewall.rules
+  echo "COMMIT" >> /etc/iptables.firewall.rules
+  iptables-restore < /etc/iptables.firewall.rules
+
+  ## Install Mosh
+  print_header "Installing Mosh server..."
+  install software-properties-common
+  add-apt-repository -y ppa:keithw/mosh
+  echo -ne "\n" | install mosh
+fi
+
+
+# Install zsh
+
+if ! command -v zsh > /dev/null; then
+  print_header "Installing zsh..."
+  install zsh
+  yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+  print_header "Cloning zsh-autosuggestions..."
+  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+  cp ../.zshrc ~/.zshrc
+  chsh -s $(which zsh)
+  echo "Use zsh!"
+  zsh
+fi
+
 # Install fd
 
 if ! command -v fdfind > /dev/null; then
@@ -70,37 +102,5 @@ if ! command -v vim > /dev/null; then
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   vim +PlugInstall +qall > /dev/null
-fi
-
-# Install Mosh server
-
-if ! command -v mosh > /dev/null; then
-  ## Enable firewall over UDP ports
-  echo "*filter" > /etc/iptables.firewall.rules
-  echo "-A INPUT -p udp --dport 60000:61000 -j ACCEPT" >> /etc/iptables.firewall.rules
-  echo "COMMIT" >> /etc/iptables.firewall.rules
-  iptables-restore < /etc/iptables.firewall.rules
-
-  ## Install Mosh
-  print_header "Installing Mosh server..."
-  install software-properties-common
-  add-apt-repository -y ppa:keithw/mosh
-  echo -ne "\n" | install mosh
-fi
-
-
-# Install zsh
-
-if ! command -v zsh > /dev/null; then
-  print_header "Installing zsh..."
-  install zsh
-  yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-  print_header "Cloning zsh-autosuggestions..."
-  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-  cp ../.zshrc ~/.zshrc
-  chsh -s $(which zsh)
-  echo "Use zsh!"
-  zsh
 fi
 

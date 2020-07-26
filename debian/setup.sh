@@ -70,5 +70,6 @@ if ! command -v zsh > /dev/null; then
   yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
   cp ../.zshrc ~/.zshrc
+  chsh -s $(which zsh)
 fi
 

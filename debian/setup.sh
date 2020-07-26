@@ -2,6 +2,7 @@
 
 # Update apt packages
 
+echo "####### Update apt packages.. #######"
 apt-get update
 
 # Setup Git identity
@@ -22,6 +23,8 @@ fi
 # Install Mosh server
 
 ## Enable firewall over UDP ports
-echo "-A INPUT -p udp --dport 60000:61000 -j ACCEPT" > /etc/iptables.firewall.rules
-
+echo "*filter" > /etc/iptables.firewall.rules
+echo "-A INPUT -p udp --dport 60000:61000 -j ACCEPT" >> /etc/iptables.firewall.rules
+echo "COMMIT" >> /etc/iptables.firewall.rules
+iptables-restore < /etc/iptables.firewall.rules
 

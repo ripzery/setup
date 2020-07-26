@@ -60,6 +60,7 @@ fi
 if ! command -v zsh > /dev/null; then
   print_header "Installing zsh..."
   install zsh
+  cp ../.zshrc ~/.zshrc
 fi
 
 

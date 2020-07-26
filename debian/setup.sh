@@ -68,6 +68,8 @@ if ! command -v zsh > /dev/null; then
   print_header "Installing zsh..."
   install zsh
   yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+  print_header "Cloning zsh-autosuggestions..."
   git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
   cp ../.zshrc ~/.zshrc
   chsh -s $(which zsh)

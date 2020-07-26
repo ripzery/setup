@@ -38,9 +38,9 @@ if ! command -v mosh > /dev/null; then
 
   ## Install Mosh
   print_header "Installing Mosh server..."
-  sudo apt-get install software-properties-common
-  sudo add-apt-repository ppa:keithw/mosh
-  sudo apt-get update
+  apt-get install software-properties-common
+  add-apt-repository ppa:keithw/mosh
+  yes | apt-get update
   yes | sudo apt-get install mosh
 fi
 

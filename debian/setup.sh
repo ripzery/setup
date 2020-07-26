@@ -59,7 +59,6 @@ if ! command -v zsh > /dev/null; then
   print_header "Cloning zsh-autosuggestions..."
   git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
   curl -L -o ~/.zshrc https://raw.githubusercontent.com/ripzery/setup/master/.zshrc
-  chsh -s $(which zsh)
 fi
 
 # Install fd
@@ -102,5 +101,6 @@ if ! command -v vim > /dev/null; then
   vim +PlugInstall +qall > /dev/null
 fi
 
+chsh -s $(which zsh)
 echo "Use zsh!"
 zsh

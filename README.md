@@ -47,7 +47,13 @@ Your should see something similar to
 Hi ripzery! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
-5. Clone this repo
+5. Clone this repo or Run the following command
+
+```bash
+apt-get install -y curl
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ripzery/setup/master/debian/setup.sh)"
+
+```
 
 ```bash
 mkdir ~/workspace && cd ~/workspace

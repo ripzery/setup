@@ -57,4 +57,9 @@ fi
 
 # Install zsh
 
+if ! command -v zsh > /dev/null; then
+  print_header "Installing zsh..."
+  install zsh
+fi
+
 

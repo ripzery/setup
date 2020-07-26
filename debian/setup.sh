@@ -7,6 +7,11 @@ print_header()
   echo ""
 }
 
+install()
+{
+  apt-get install -y $1 
+}
+
 # Update apt packages
 
 print_header "Update apt packages..." 
@@ -43,4 +48,14 @@ if ! command -v mosh > /dev/null; then
   apt-get update
   echo -ne "\n" | apt-get install -y mosh
 fi
+
+# Install curl
+
+if ! command -v curl > /dev/null; then
+  print_header "Installing curl..."
+  install curl
+fi
+
+# Install zsh
+
 

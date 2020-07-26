@@ -22,6 +22,6 @@ fi
 # Install Mosh server
 
 ## Enable firewall over UDP ports
-echo "-A INPUT -p udp --dport 60000:61000 -j ACCEPT" > iptables.firewall.rules
+echo "-A INPUT -p udp --dport 60000:61000 -j ACCEPT" > /etc/iptables.firewall.rules
 
 

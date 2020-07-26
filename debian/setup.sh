@@ -73,5 +73,7 @@ if ! command -v zsh > /dev/null; then
   git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
   cp ../.zshrc ~/.zshrc
   chsh -s $(which zsh)
+  print_header "Use zsh!"
+  zsh
 fi
 

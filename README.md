@@ -47,6 +47,13 @@ Your should see something similar to
 Hi ripzery! You've successfully authenticated, but GitHub does not provide shell access.
 ```
 
+5. Clone this repo
+
+```bash
+mkdir workspace && cd workspace
+git clone git@github.com:ripzery/setup.get && cd setup
+```
+
 **Requirement**:
 
 1. VIM

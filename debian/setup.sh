@@ -2,7 +2,9 @@
 
 print_header()
 {
+  echo ""
   echo "####### $1 #######"
+  echo ""
 }
 
 # Update apt packages
@@ -22,13 +24,12 @@ fi
 
 if ! command -v vim > /dev/null; then
   print_header "Installing VIM..."
-  echo "y" | apt-get install vim
+  yes | apt-get install vim
 fi
 
 # Install Mosh server
 
 if ! command -v mosh > /dev/null; then
-  print_header "Installing Mosh server..."
   ## Enable firewall over UDP ports
   echo "*filter" > /etc/iptables.firewall.rules
   echo "-A INPUT -p udp --dport 60000:61000 -j ACCEPT" >> /etc/iptables.firewall.rules
@@ -36,9 +37,10 @@ if ! command -v mosh > /dev/null; then
   iptables-restore < /etc/iptables.firewall.rules
 
   ## Install Mosh
+  print_header "Installing Mosh server..."
   sudo apt-get install software-properties-common
   sudo add-apt-repository ppa:keithw/mosh
   sudo apt-get update
-  echo "y" | sudo apt-get install mosh
+  yes | sudo apt-get install mosh
 fi
 

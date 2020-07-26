@@ -25,11 +25,50 @@ if ! git config user.email > /dev/null; then
   git config --global user.name "euro"
 fi
 
+# Install curl
+
+if ! command -v curl > /dev/null; then
+  print_header "Installing curl..."
+  install curl
+fi
+
+# Install fd
+
+if ! command -v fd > /dev/null; then
+  print_header "Installing fd..."
+  install fd
+fi
+
+# Install fzf
+
+if ! command -v fzf > /dev/null; then
+  print_header "Installing fzf..."
+  install fzf
+fi
+
+# Install ripgrep
+
+if ! command -v ripgrep > /dev/null; then
+  print_header "Installing ripgrep..."
+  install ripgrep
+fi
+
+# Install ag
+
+if ! command -v ag > /dev/null; then
+  print_header "Installing Ag..."
+  install silversearcher-ag
+fi
+
 # Install VIM
 
 if ! command -v vim > /dev/null; then
   print_header "Installing VIM..."
-  apt-get install -y vim
+  install vim
+  print_header "Installiung VIM plug..."
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  vim +PlugInstall +qall > /dev/null
 fi
 
 # Install Mosh server
@@ -48,19 +87,6 @@ if ! command -v mosh > /dev/null; then
   echo -ne "\n" | install mosh
 fi
 
-# Install curl
-
-if ! command -v curl > /dev/null; then
-  print_header "Installing curl..."
-  install curl
-fi
-
-# Install fzf
-
-if ! command -v fzf > /dev/null; then
-  print_header "Installing fzf..."
-  install fzf
-fi
 
 # Install zsh
 
@@ -73,7 +99,7 @@ if ! command -v zsh > /dev/null; then
   git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
   cp ../.zshrc ~/.zshrc
   chsh -s $(which zsh)
-  print_header "Use zsh!"
+  echo "Use zsh!"
   zsh
 fi
 

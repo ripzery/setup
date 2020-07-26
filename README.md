@@ -59,14 +59,11 @@ git clone git@github.com:ripzery/setup.git && cd setup
 
 1. VIM
 2. ZSH
-3. Font
-4. CLI Tools
-5. Git Access Token
-6. Add Mosh server
+3. CLI Tools
+4. Git Access Token
+5. Add Mosh server
 
-### Setup VIM
-
-
+Runs `./debian/setup.sh`
 
 ## Mac
 

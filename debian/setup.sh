@@ -65,6 +65,7 @@ fi
 if ! command -v vim > /dev/null; then
   print_header "Installing VIM..."
   install vim
+  curl -L -o ~/.vimrc https://raw.githubusercontent.com/ripzery/vimrc/master/.vimrc
   print_header "Installiung VIM plug..."
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

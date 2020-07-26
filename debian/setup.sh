@@ -36,9 +36,9 @@ if ! command -v mosh > /dev/null; then
   iptables-restore < /etc/iptables.firewall.rules
 
   ## Install Mosh
-  sudo apt-get install python-software-properties
+  sudo apt-get install software-properties-common
   sudo add-apt-repository ppa:keithw/mosh
   sudo apt-get update
-  sudo apt-get install mosh
+  echo "y" | sudo apt-get install mosh
 fi
 

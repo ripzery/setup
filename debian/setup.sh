@@ -3,4 +3,4 @@
 # Install VIM
 
 apt-get update
-apt-get install vim
+echo "y" | apt-get install vim

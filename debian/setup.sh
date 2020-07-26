@@ -24,7 +24,7 @@ fi
 
 if ! command -v vim > /dev/null; then
   print_header "Installing VIM..."
-  yes | apt-get install vim
+  apt-get install -y vim
 fi
 
 # Install Mosh server
@@ -38,9 +38,9 @@ if ! command -v mosh > /dev/null; then
 
   ## Install Mosh
   print_header "Installing Mosh server..."
-  yes | apt-get install software-properties-common
-  add-apt-repository ppa:keithw/mosh
-  yes | apt-get update
-  yes | sudo apt-get install mosh
+  apt-get install -y software-properties-common
+  add-apt-repository -y ppa:keithw/mosh
+  apt-get update
+  echo -ne "\n" | apt-get install -y mosh
 fi
 

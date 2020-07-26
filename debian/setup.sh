@@ -98,9 +98,11 @@ if ! command -v vim > /dev/null; then
   print_header "Installing VIM plug..."
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  echo "Finish curl"
   vim +PlugInstall +qall > /dev/null
+  echo "Finish install"
 fi
 
 chsh -s $(which zsh)
 echo "Use zsh!"
-echo -ne "\n" | zsh
+zsh

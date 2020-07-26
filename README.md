@@ -27,11 +27,14 @@ cat your_ssh_key.pub
 ```
 Copy & paste your public key at https://github.com/settings/keys
 
-3. Add ssh key to agent
+3. Add ssh key to agent permanently
 
 ```bash
-eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/your_ssh_key
+echo "
+Host *
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/gh_id_rsa
+" > ~/.ssh/config
 ```
 
 4. Test your connection to GitHub

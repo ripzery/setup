@@ -43,10 +43,9 @@ if ! command -v mosh > /dev/null; then
 
   ## Install Mosh
   print_header "Installing Mosh server..."
-  apt-get install -y software-properties-common
+  install software-properties-common
   add-apt-repository -y ppa:keithw/mosh
-  apt-get update
-  echo -ne "\n" | apt-get install -y mosh
+  echo -ne "\n" | install mosh
 fi
 
 # Install curl

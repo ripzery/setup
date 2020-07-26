@@ -4,9 +4,17 @@
 
 apt-get update
 
+# Setup Git identity
+
+if ! git config user.email; then
+  echo "####### Setup Git Identity ########"
+  git config --global user.email "ripzery@gmail.com"
+  git config --global user.name "euro"
+fi
+
 # Install VIM
 
-if ! type "$vim" > /dev/null; then
+if ! command -v vim &> /dev/null; then
   echo "######## Installing VIM... ########"
   echo "y" | apt-get install vim
 fi

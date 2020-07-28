@@ -50,6 +50,7 @@ Hi ripzery! You've successfully authenticated, but GitHub does not provide shell
 5. Clone this repo or Run the following command
 
 ```bash
+apt-get update
 apt-get install -y curl
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ripzery/setup/master/debian/setup.sh)"
 

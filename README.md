@@ -6,11 +6,13 @@ A personal set of commands to setup new working machine depending on the OS.
 
 ### Setup Git
 
-1. Install git to be able to clone the repo with the following command:
+Install git and configure the user credential
 
 ```bash
-apt-get update
-apt-get install -y git
+apt-get update && \
+apt-get install -y git && \
+git config --global user.email "ripzery@gmail.com" && \
+git config --global user.name "euro"
 ```
 
 2. Add ssh key for GitHub account
@@ -18,8 +20,8 @@ apt-get install -y git
 On the server:
 
 ```bash
-cd ~/.ssh
-ssh-keygen -t rsa -C "your_email"
+cd ~/.ssh && \
+ssh-keygen -t rsa -C "ripzery@gmail.com" && \
 cat your_ssh_key.pub
 ```
 Copy & paste your public key at https://github.com/settings/keys

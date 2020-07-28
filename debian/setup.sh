@@ -51,7 +51,7 @@ fi
 
 # Install zsh
 
-installed_zsh=0
+installed_zsh=1
 if ! command -v zsh > /dev/null; then
   print_header "Installing zsh..."
   install zsh
@@ -60,7 +60,7 @@ if ! command -v zsh > /dev/null; then
   print_header "Cloning zsh-autosuggestions..."
   git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
   curl -L -o ~/.zshrc https://raw.githubusercontent.com/ripzery/setup/master/.zshrc
-  installed_zsh=1
+  installed_zsh=0
 fi
 
 # Install fd
@@ -126,7 +126,7 @@ if ! command -v vim > /dev/null; then
       vim +PlugInstall +qall > /dev/null
 fi
 
-if [ installed_zsh ]; then
+if [ "$installed_zsh" = "0" ]; then
   chsh -s $(which zsh)
   echo "Use zsh!"
   zsh

@@ -123,12 +123,6 @@ if ! command -v vim > /dev/null; then
   vim +PlugInstall +qall > /dev/null
 fi
 
-if [ "$installed_zsh" = "0" ]; then
-  chsh -s $(which zsh)
-  echo "Use zsh!"
-  zsh
-fi
-
 echo "# SUMMARY"
 
 print_header "Git"
@@ -158,9 +152,8 @@ node --version
 
 echo "Finish."
 
-
-
-
-
-
-
+if [ "$installed_zsh" = "0" ]; then
+  chsh -s $(which zsh)
+  echo "Use zsh!"
+  zsh
+fi

@@ -129,3 +129,38 @@ if [ "$installed_zsh" = "0" ]; then
   zsh
 fi
 
+echo "# SUMMARY"
+
+print_header "Git"
+git --version
+print_header "Curl"
+curl --version
+print_header "Mosh"
+mosh --version
+print_header "Zsh"
+zsh -- version
+print_header "Fd"
+fdfind --version
+print_header "Fzf"
+fzf --version
+print_header "Ripgrep"
+rg --version
+print_header "Ag"
+ag -- version
+print_header "nvm"
+nvm --version
+print_header "yarn"
+yarn --version
+print_header "nvm"
+nvm --version
+print_header "node"
+node --version
+
+echo "Finish."
+
+
+
+
+
+
+

@@ -98,10 +98,6 @@ fi
 #  install node
 #fi
 #
-#if ! command -v yarn > /dev/null; then
-#  print_header "Installing yarn..."
-#  install yarn
-#fi
 #
 #if ! command -v npm > /dev/null; then
 #  print_header "Installing npm..."
@@ -112,6 +108,12 @@ fi
 
 if ! command -v nvm > /dev/null; then
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+  nvm install --lts
+fi
+
+if ! command -v yarn > /dev/null; then
+  print_header "Installing yarn..."
+  install yarn
 fi
 
 # Install VIM

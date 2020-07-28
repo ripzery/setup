@@ -13,7 +13,7 @@ A personal set of commands to setup new working machine depending on the OS.
 1. Install git to be able to clone the repo with the following command:
 
 ```bash
-echo y | apt-get install git
+apt-get install -y git
 ```
 
 2. Add ssh key for GitHub account

@@ -40,7 +40,7 @@ echo "Host *
 echo "yes" | ssh -T git@github.com
 ```
 
-Your should see something similar to
+You should see something similar to
 
 ```
 Hi ripzery! You've successfully authenticated, but GitHub does not provide shell access.

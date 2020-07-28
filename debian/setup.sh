@@ -141,7 +141,7 @@ gpg --version
 print_header "Mosh"
 mosh --version
 print_header "Zsh"
-zsh -- version
+zsh --version
 print_header "Fd"
 fdfind --version
 print_header "Fzf"
@@ -149,7 +149,7 @@ fzf --version
 print_header "Ripgrep"
 rg --version
 print_header "Ag"
-ag -- version
+ag --version
 print_header "nvm"
 nvm --version
 print_header "yarn"

@@ -126,7 +126,7 @@ if ! command -v vim > /dev/null; then
       vim +PlugInstall +qall > /dev/null
 fi
 
-if installed_zsh; then
+if [ installed_zsh ]; then
   chsh -s $(which zsh)
   echo "Use zsh!"
   zsh

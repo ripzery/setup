@@ -91,15 +91,6 @@ if ! command -v ag > /dev/null; then
   install silversearcher-ag
 fi
 
-# Install node
-
-#if ! command -v node > /dev/null; then
-#  print_header "Installing node..."
-#  install node
-#fi
-#
-#
-
 # Install nvm
 
 if ! command -v nvm > /dev/null; then
@@ -110,12 +101,12 @@ fi
 
 if ! command -v yarn > /dev/null; then
   print_header "Installing yarn..."
-  install yarn
+  apt-get install -y --no-install-recommends yarn
 fi
 
 if ! command -v npm > /dev/null; then
   print_header "Installing npm..."
-  install npm
+  apt-get install -y --no-install-recommends npm
 fi
 
 # Install VIM
@@ -127,7 +118,7 @@ if ! command -v vim > /dev/null; then
   print_header "Installing VIM plug..."
   curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-      vim +PlugInstall +qall > /dev/null
+  vim +PlugInstall +qall > /dev/null
 fi
 
 if [ "$installed_zsh" = "0" ]; then

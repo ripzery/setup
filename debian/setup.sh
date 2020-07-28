@@ -99,6 +99,7 @@ fi
 # Install nvm
 
 if ! command -v nvm > /dev/null; then
+  print_header "Installing NVM..."
   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
   . ~/.bashrc
   nvm install --lts

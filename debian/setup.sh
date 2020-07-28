@@ -99,10 +99,6 @@ fi
 #fi
 #
 #
-#if ! command -v npm > /dev/null; then
-#  print_header "Installing npm..."
-#  install npm
-#fi
 
 # Install nvm
 
@@ -114,6 +110,11 @@ fi
 if ! command -v yarn > /dev/null; then
   print_header "Installing yarn..."
   install yarn
+fi
+
+if ! command -v npm > /dev/null; then
+  print_header "Installing npm..."
+  install npm
 fi
 
 # Install VIM

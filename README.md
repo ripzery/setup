@@ -6,7 +6,7 @@ A personal set of commands to setup new working machine depending on the OS.
 
 ### Setup Git
 
-Install git and configure the user credential
+1. Install git and configure the user credential
 
 ```bash
 apt-get update && \

@@ -34,7 +34,7 @@ fi
 
 if ! command -v gpg  > /dev/null; then
   print_header "Installing gpg..."
-  install gpg
+  install gnupg2
 fi
 
 # Install Mosh server
@@ -109,7 +109,6 @@ if ! command -v yarn > /dev/null; then
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
   apt-get update 
-  apt-get install -y gnupg2 
   apt-get install -y --no-install-recommends yarn
 fi
 

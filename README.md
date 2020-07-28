@@ -49,8 +49,8 @@ Hi ripzery! You've successfully authenticated, but GitHub does not provide shell
 Run the following command:
 
 ```bash
-apt-get update
-apt-get install -y git curl
+apt-get update && \
+apt-get install -y git curl && \
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ripzery/setup/master/debian/setup.sh)"
 ```
 

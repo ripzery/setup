@@ -32,6 +32,11 @@ if ! command -v curl > /dev/null; then
   install curl
 fi
 
+if ! command -v gpg  > /dev/null; then
+  print_header "Installing gpg..."
+  install gpg
+fi
+
 # Install Mosh server
 
 if ! command -v mosh > /dev/null; then
@@ -104,7 +109,8 @@ if ! command -v yarn > /dev/null; then
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
   apt-get update 
-  apt-get install -y --no-install-recommends gnupg2 yarn
+  apt-get install -y gnupg2 
+  apt-get install -y --no-install-recommends yarn
 fi
 
 if ! command -v npm > /dev/null; then
@@ -130,6 +136,8 @@ print_header "Git"
 git --version
 print_header "Curl"
 curl --version
+print_header "Gpg"
+gpg --version
 print_header "Mosh"
 mosh --version
 print_header "Zsh"

@@ -38,7 +38,6 @@ brew cask install \
   spotify \
   rectangle \
   authy \
-  jq \
   tree \
   sourcetree \
 

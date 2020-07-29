@@ -50,6 +50,7 @@ brew cask install \
   monodraw
 
 # XCode
+print_header "Installing XCode"
 mas install 497799835
 
 # Config Mac OS

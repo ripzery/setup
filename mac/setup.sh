@@ -21,5 +21,7 @@ if ! command -v brew > /dev/null; then
 fi
 
 ## Install homebrew packages
+print_header "Install homebrew packages"
 
+install dockutil
 ## 

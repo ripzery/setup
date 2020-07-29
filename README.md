@@ -83,5 +83,8 @@ Manual steps:
 6. Setup 1Password
 7. Setup Square 
 8. Setup Slack
+9. Setup VS Code
 
+You can easily import settings with this https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 
+Upload from your old machine. Download from your new machine.

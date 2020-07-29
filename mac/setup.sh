@@ -32,6 +32,9 @@ install bat
 install the_silver_searcher
 install cointop
 install fastlane
+install htop # Performance Monitoring
+install iftop # Network Monitoring
+install postgresql
 brew cask install \
   visual-studio-code \
   google-chrome \

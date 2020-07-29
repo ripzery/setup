@@ -43,7 +43,6 @@ brew cask install \
   tree \
   sourcetree \
 
-
 # Config Mac OS
 
 ## Remove application from dock
@@ -82,4 +81,9 @@ defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 
 ## Install Oh My Zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+if [ ! -d "~/.oh-my-zsh" ]; then
+  yes | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  print_header "Cloning zsh-autosuggestions..."
+  git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+  curl -L -o ~/.zshrc https://raw.githubusercontent.com/ripzery/setup/master/.zshrc
+fi

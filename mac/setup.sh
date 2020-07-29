@@ -25,7 +25,6 @@ print_header "Install homebrew packages"
 
 install dockutil
 install mas
-brew cask
 brew cask install \
   visual-studio-code \
   google-chrome \

@@ -39,6 +39,7 @@ brew cask install \
   authy \
   sourcetree \
   1password \
+  monodraw
 
 
 # Config Mac OS

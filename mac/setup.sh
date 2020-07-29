@@ -27,6 +27,9 @@ install dockutil
 install mas
 install jq
 install tree
+install fd
+install fzf
+install the_silver_searcher
 brew cask install \
   visual-studio-code \
   google-chrome \

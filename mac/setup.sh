@@ -31,7 +31,7 @@ install dockutil
 print_header "Removing applications from dock..."
 dockutil --remove 'Mail'
 dockutil --remove 'Music'
-dockutti --remove 'FaceTime'
+dockutil --remove 'FaceTime'
 dockutil --remove 'Contacts'
 dockutil --remove 'Calendar'
 dockutil --remove 'Maps'

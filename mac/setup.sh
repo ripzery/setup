@@ -37,7 +37,7 @@ brew cask install \
   alfred \
   slack \
   spotify \
-  magnet \
+  rectangle \
   authy \
   jq \
   tree \

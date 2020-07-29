@@ -16,7 +16,9 @@ install()
 }
 
 ## Install homebrew
-echo -xe "\n" | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+if ! command -v brew > /dev/null; then
+  echo -xe "\n" | /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+fi
 
 ## Install homebrew packages
 

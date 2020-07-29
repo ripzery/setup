@@ -31,6 +31,7 @@ install fzf
 install bat
 install the_silver_searcher
 install cointop
+install fastlane
 brew cask install \
   visual-studio-code \
   google-chrome \

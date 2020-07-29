@@ -24,6 +24,24 @@ fi
 print_header "Install homebrew packages"
 
 install dockutil
+install mas
+brew cask
+brew cask install \
+  visual-studio-code \
+  google-chrome \
+  firefox \
+  opera \
+  rectangle \
+  iterm2 \
+  docker \
+  alfred \
+  slack \
+  spotify \
+  magnet \
+  authy \
+  jq \
+  tree \
+  sourcetree \
 
 
 # Config Mac OS

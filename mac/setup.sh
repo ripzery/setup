@@ -28,6 +28,7 @@ install jq
 install tree
 install fd
 install fzf
+install bat
 install the_silver_searcher
 install cointop
 brew cask install \
@@ -43,7 +44,6 @@ brew cask install \
   sourcetree \
   1password \
   monodraw
-
 
 # Config Mac OS
 

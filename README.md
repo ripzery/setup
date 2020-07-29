@@ -69,3 +69,19 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ripzery/setup/master/debia
 
 ## Mac
 
+Runs:
+
+`sh -c "$(curl -fsSL https://raw.githubusercontent.com/ripzery/setup/master/mac/setup.sh)"`
+
+Manual steps:
+
+1. Configure your iTerms2 Theme and Font
+2. Add secondary language to the input source
+3. Configure your trackpad, keyboard, shortcuts
+4. Setup Alfred
+5. Setup Chrome
+6. Setup 1Password
+7. Setup Square 
+8. Setup Slack
+
+

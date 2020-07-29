@@ -43,7 +43,6 @@ brew cask install \
   tree \
   sourcetree \
 
-
 # Config Mac OS
 
 ## Remove application from dock

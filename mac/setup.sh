@@ -45,6 +45,9 @@ brew cask install \
   1password \
   monodraw
 
+# XCode
+mas install 497799835
+
 # Config Mac OS
 
 ## Remove application from dock

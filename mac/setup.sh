@@ -86,3 +86,22 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
   git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
   curl -L -o ~/.zshrc https://raw.githubusercontent.com/ripzery/setup/master/.zshrc
 fi
+
+## Setup NVM, Yarn, NPM
+if ! command -v nvm > /dev/null; then
+  print_header "Installing NVM and Yarn..."
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+  . ~/.zshrc
+  nvm install --lts
+
+  # Install Yarn
+  curl -o- -L https://yarnpkg.com/install.sh | bash
+fi
+
+## Setup VIM
+if [ ! -f "$HOME/.vimrc" ]; then
+  curl -L -o ~/.vimrc https://raw.githubusercontent.com/ripzery/vimrc/master/.vimrc
+  print_header "Installing VIM plug..."
+  curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  vim +PlugInstall +qall > /dev/null 
+fi

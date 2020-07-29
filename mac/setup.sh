@@ -25,3 +25,20 @@ print_header "Install homebrew packages"
 
 install dockutil
 ## 
+
+
+## Remove application from dock
+print_header "Removing applications from dock..."
+dockutil --remove 'Mail'
+dockutil --remove 'Music'
+dockutti --remove 'FaceTime'
+dockutil --remove 'Contacts'
+dockutil --remove 'Calendar'
+dockutil --remove 'Maps'
+dockutil --remove 'TV'
+dockutil --remove 'News'
+dockutil --remove 'Numbers'
+dockutil --remove 'Pages'
+dockutil --remove 'Keynotes'
+dockutil --remove 'Downloads'
+dockutil --remove 'System Preferences'

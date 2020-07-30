@@ -66,7 +66,7 @@ brew cask install \
   adoptopenjdk8 
 
 # Gaming xD
-brew cast install \
+brew cask install \
   minecraft \
   steam
 

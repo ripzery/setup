@@ -88,3 +88,12 @@ Manual steps:
 You can easily import settings with this https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
 
 Upload from your old machine. Download from your new machine.
+10. Setup ssh keys for my website
+```bash
+ssh-keygen -t rsa
+# Entering empty passphrase...
+# Entering filename.. e.g. euro-id_rsa
+ssh-copy-id -i euro-id_rsa.pub root@YOUR_SERVER
+Append `IdentityFile euro-id_rsa` in `~/.ssh/config` file.
+Now, trying to ssh to your server
+```

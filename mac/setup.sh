@@ -22,32 +22,32 @@ fi
 ## Install homebrew packages
 print_header "Install homebrew packages"
 
-install dockutil \
-  mas \
-  jq \
-  tree \
-  fd \
-  fzf \
-  bat \
-  the_silver_searcher \
-  cointop \
-  fastlane \
-  htop \
-  iftop \
-  postgresql \
-  mosh \
-  autoconf \ # Erlang
-  wxmac \ # Erlang
-  openssl \
-  fop \ # Erlang
-  coreutils \ # Erlang
-  automake \ # Erlang
-  libyaml \ # Erlang
-  libtool \ # Erlang
-  libxslt \ # Erlang
-  unixodbc \ # Erlang
-  unzip \   # Erlang
-  readline  # Erlang
+install dockutil 
+install mas 
+install jq 
+install tree 
+install fd 
+install fzf 
+install bat 
+install the_silver_searcher 
+install cointop 
+install fastlane 
+install htop 
+install iftop 
+install postgresql 
+install mosh 
+install autoconf 
+install wxmac 
+install openssl
+install fop 
+install coreutils
+install automake 
+install libyaml 
+install libtool 
+install libxslt 
+install unixodbc 
+install unzip 
+install readline
 
 brew tap adoptopenjdk/openjdk
 brew cask install \
@@ -63,7 +63,12 @@ brew cask install \
   sourcetree \
   1password \
   monodraw \
-  adoptopenjdk8
+  adoptopenjdk8 
+
+# Gaming xD
+brew cast install \
+  minecraft \
+  steam
 
 # XCode
 print_header "Installing XCode"
@@ -94,7 +99,7 @@ dockutil --remove 'Photos'
 
 ## Config Dock
 defaults write com.apple.dock autohide -bool true && \
-killall Dock
+  killall Dock
 
 ## Config Trackpad
 
@@ -141,7 +146,7 @@ if [ ! -d "$HOME/.oh-my-zsh" ]; then
   print_header "Cloning zsh-autosuggestions..."
   git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
   curl -L -o ~/.zshrc https://raw.githubusercontent.com/ripzery/setup/master/.zshrc
-echo "done"
+  echo "done"
 fi
 
 ## Setup NVM, Yarn, NPM
@@ -169,13 +174,15 @@ fi
 ## Setup ITerm2 Integration
 print_header "Setup ITerm2"
 curl -L https://iterm2.com/shell_integration/zsh \
--o ~/.iterm2_shell_integration.zsh
+  -o ~/.iterm2_shell_integration.zsh
 
 ## Setup Elixir
 print_header "Installing ASDF and Elixir"
+export CFLAGS="-O2 -g -fno-stack-check"
+export KERL_CONFIGURE_OPTIONS="--disable-hipe --with-ssl=$(brew --prefix openssl)"
 install asdf
 asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
-asdf install erlang 22.2
+asdf install erlang 22.1.4
 asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
 asdf install elixir 1.10.2
 

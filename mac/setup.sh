@@ -47,7 +47,8 @@ brew cask install \
   authy \
   sourcetree \
   1password \
-  monodraw
+  monodraw \
+  adoptopenjdk8
 
 # XCode
 print_header "Installing XCode"

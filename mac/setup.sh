@@ -138,9 +138,9 @@ defaults write -g NSToolbarFullScreenAnimationDuration -float 0
 
 echo "done"
 
-# Config Computer Name
-scutil --set ComputerName "omg.network"
-scutil --set LocalHostName "omgnetwork"
+# Config Computer Name (Required password)
+# scutil --set ComputerName "omg.network"
+# scutil --set LocalHostName "omgnetwork"
 
 ## Setup Font
 print_header "Setup Font"
@@ -188,7 +188,8 @@ curl -L https://iterm2.com/shell_integration/zsh \
 ## Setup Elixir
 print_header "Installing ASDF and Elixir"
 export CFLAGS="-O2 -g -fno-stack-check"
-export KERL_CONFIGURE_OPTIONS="--disable-hipe --with-ssl=$(brew --prefix openssl)"
+#export KERL_CONFIGURE_OPTIONS="--disable-hipe --with-ssl=$(brew --prefix openssl)"
+export KERL_CONFIGURE_OPTIONS="--disable-debug --without-javac"
 install asdf
 asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
 asdf install erlang 22.2

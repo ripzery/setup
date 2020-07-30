@@ -53,6 +53,9 @@ brew cask install \
 print_header "Installing XCode"
 mas install 497799835
 
+print_header "Installing Be Focused Pro"
+mas install 961632517
+
 # Config Mac OS
 
 ## Remove application from dock
@@ -89,8 +92,8 @@ defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
 
 # Set a blazingly fast keyboard repeat rate
 print_header "Set keyboard repeat rate"
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 10
+defaults write NSGlobalDomain KeyRepeat -int 1.5
+defaults write NSGlobalDomain InitialKeyRepeat -int 13
 
 ## Config Animation
 print_header "Setup Animation"
@@ -146,4 +149,9 @@ if [ ! -f "$HOME/.vimrc" ]; then
   vim +PlugInstall +qall > /dev/null 
   echo "done"
 fi
+
+## Setup ITerm2 Integration
+print_header "Setup ITerm2"
+curl -L https://iterm2.com/shell_integration/zsh \
+-o ~/.iterm2_shell_integration.zsh
 

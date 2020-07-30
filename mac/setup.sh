@@ -36,6 +36,7 @@ install htop # Performance Monitoring
 install iftop # Network Monitoring
 install postgresql
 install mosh
+brew tap adoptopenjdk/openjdk
 brew cask install \
   visual-studio-code \
   google-chrome \

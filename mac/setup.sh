@@ -101,6 +101,11 @@ dockutil --remove 'Photos'
 defaults write com.apple.dock autohide -bool true && \
   killall Dock
 
+# Remove the auto-hiding Dock delay
+defaults write com.apple.dock autohide-delay -float 0
+# Don’t automatically rearrange Spaces based on most recent use
+defaults write com.apple.dock mru-spaces -bool false  
+
 ## Config Trackpad
 
 # Trackpad: enable tap to click for this user and for the login screen

@@ -12,7 +12,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_DISABLE_COMPFIX=true
 
 plugins=(git zsh-autosuggestions fd fzf)
-$(brew --prefix asdf)/asdf.sh
+. $(brew --prefix asdf)/asdf.sh
 
 source $ZSH/oh-my-zsh.sh
 

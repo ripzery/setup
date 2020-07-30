@@ -129,7 +129,7 @@ echo "done"
 fi
 
 ## Setup NVM, Yarn, NPM
-if ! command -v nvm > /dev/null; then
+if [ ! -d "$HOME/.nvm" ]; then
   print_header "Installing NVM and Yarn..."
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh)"
   source ~/.zshrc
@@ -154,4 +154,12 @@ fi
 print_header "Setup ITerm2"
 curl -L https://iterm2.com/shell_integration/zsh \
 -o ~/.iterm2_shell_integration.zsh
+
+## Setup Elixir
+print_header "Installing ASDF and Elixir"
+install asdf
+asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
+asdf install erlang 22.2
+asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+asdf install elixir 1.10.2
 

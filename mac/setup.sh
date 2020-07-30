@@ -138,6 +138,10 @@ defaults write -g NSToolbarFullScreenAnimationDuration -float 0
 
 echo "done"
 
+# Config Computer Name
+scutil --set ComputerName "omg.network"
+scutil --set LocalHostName "omgnetwork"
+
 ## Setup Font
 print_header "Setup Font"
 brew tap homebrew/cask-fonts && brew cask install font-iosevka && brew cask install font-iosevka-slab
@@ -187,7 +191,7 @@ export CFLAGS="-O2 -g -fno-stack-check"
 export KERL_CONFIGURE_OPTIONS="--disable-hipe --with-ssl=$(brew --prefix openssl)"
 install asdf
 asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
-asdf install erlang 22.1.4
+asdf install erlang 22.2
 asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
 asdf install elixir 1.10.2
 

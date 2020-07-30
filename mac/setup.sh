@@ -22,20 +22,33 @@ fi
 ## Install homebrew packages
 print_header "Install homebrew packages"
 
-install dockutil
-install mas
-install jq
-install tree
-install fd
-install fzf
-install bat
-install the_silver_searcher
-install cointop
-install fastlane
-install htop # Performance Monitoring
-install iftop # Network Monitoring
-install postgresql
-install mosh
+install dockutil \
+  mas \
+  jq \
+  tree \
+  fd \
+  fzf \
+  bat \
+  the_silver_searcher \
+  cointop \
+  fastlane \
+  htop \
+  iftop \
+  postgresql \
+  mosh \
+  autoconf \ # Erlang
+  wxmac \ # Erlang
+  openssl \
+  fop \ # Erlang
+  coreutils \ # Erlang
+  automake \ # Erlang
+  libyaml \ # Erlang
+  libtool \ # Erlang
+  libxslt \ # Erlang
+  unixodbc \ # Erlang
+  unzip \   # Erlang
+  readline  # Erlang
+
 brew tap adoptopenjdk/openjdk
 brew cask install \
   visual-studio-code \

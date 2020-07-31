@@ -185,7 +185,7 @@ print_header "Setup ITerm2"
 curl -L https://iterm2.com/shell_integration/zsh \
   -o ~/.iterm2_shell_integration.zsh
 
-## Setup Elixir
+## Setup Elixir and Erlang
 print_header "Installing ASDF and Elixir"
 install asdf
 if ! command -v erl; then

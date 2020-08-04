@@ -49,6 +49,7 @@ install unzip
 install readline
 
 # GUI Apps
+brew tap homebrew/drivers
 brew tap adoptopenjdk/openjdk
 brew cask install \
   visual-studio-code \
@@ -63,7 +64,8 @@ brew cask install \
   sourcetree \
   1password \
   monodraw \
-  adoptopenjdk8 
+  adoptopenjdk8 \
+  logitech-options
 
 # Gaming xD
 brew cask install \

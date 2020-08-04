@@ -203,4 +203,4 @@ asdf global erlang 22.3.1
 asdf global elixir 1.10.2
 
 # Elixir OMG
-sh -C "$(curl -fsSL https://raw.githubusercontent.com/omgnetwork/elixir-omg/master/bin/setup.sh)"
+sh -C "$(curl -fsSL https://raw.githubusercontent.com/omgnetwork/elixir-omg/master/bin/setup)"

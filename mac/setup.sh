@@ -41,7 +41,6 @@ install wxmac
 install openssl
 install fop 
 install coreutils
-install automake 
 install libyaml 
 install libtool 
 install libxslt 
@@ -202,3 +201,6 @@ fi
 
 asdf global erlang 22.3.1
 asdf global elixir 1.10.2
+
+# Elixir OMG
+sh -C "$(curl -fsSL https://raw.githubusercontent.com/omgnetwork/elixir-omg/master/bin/setup.sh)"

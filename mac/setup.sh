@@ -48,6 +48,7 @@ install unixodbc
 install unzip 
 install readline
 
+# GUI Apps
 brew tap adoptopenjdk/openjdk
 brew cask install \
   visual-studio-code \

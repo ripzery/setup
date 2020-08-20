@@ -96,6 +96,13 @@ if ! command -v ag > /dev/null; then
   install silversearcher-ag
 fi
 
+# Install Httpie
+
+if ! command -v http > /dev/null; then
+  print_header "Installing HTTPie..."
+  install httpie
+fi
+
 # Install nvm
 
 if ! command -v nvm > /dev/null; then

@@ -47,6 +47,7 @@ install libxslt
 install unixodbc 
 install unzip 
 install readline
+install httpie
 
 # GUI Apps
 brew tap homebrew/drivers

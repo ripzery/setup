@@ -52,13 +52,12 @@ install httpie
 # GUI Apps
 brew tap homebrew/drivers
 brew tap adoptopenjdk/openjdk
-brew cask install \
+brew install --cask \
   visual-studio-code \
   google-chrome \
   iterm2 \
   docker \
   alfred \
-  slack \
   spotify \
   rectangle \
   authy \
@@ -66,7 +65,14 @@ brew cask install \
   1password \
   monodraw \
   adoptopenjdk8 \
-  logitech-options
+  logitech-options \
+  telegram \
+  endel \
+  fantastical
+  line \
+  outline \
+  notion
+
 
 # Gaming xD
 brew cask install \

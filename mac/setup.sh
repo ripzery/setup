@@ -75,7 +75,7 @@ brew install --cask \
 
 
 # Gaming xD
-brew cask install \
+brew install --cask \
   minecraft \
   steam
 

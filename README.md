@@ -34,7 +34,7 @@ echo "Host *
   IdentityFile ~/.ssh/gh_id_rsa" > ~/.ssh/config
 ```
 
-4. Test your connection to GitHub
+5. Test your connection to GitHub
 
 ```bash
 echo "yes" | ssh -T git@github.com

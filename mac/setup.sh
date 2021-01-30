@@ -153,7 +153,7 @@ echo "done"
 
 ## Setup Font
 print_header "Setup Font"
-brew tap homebrew/cask-fonts && brew cask install font-iosevka && brew cask install font-iosevka-slab
+brew tap homebrew/cask-fonts && brew install --cask font-iosevka && brew install --cask font-iosevka-slab
 
 echo "done"
 
@@ -212,6 +212,3 @@ fi
 asdf global erlang 22.3.1
 asdf global elixir 1.10.2
 
-# Elixir OMG
-print_header "Setup Elixir-OMG"
-sh -C "$(curl -fsSL https://raw.githubusercontent.com/omgnetwork/elixir-omg/master/bin/setup)" > /dev/null

@@ -50,7 +50,6 @@ install readline
 install httpie
 
 # GUI Apps
-brew tap homebrew/drivers
 brew tap adoptopenjdk/openjdk
 brew install --cask \
   visual-studio-code \
@@ -65,13 +64,12 @@ brew install --cask \
   1password \
   monodraw \
   adoptopenjdk8 \
-  logitech-options \
   telegram \
-  endel \
-  fantastical
-  line \
+  fantastical \
   outline \
-  notion
+  outline-manager \
+  notion \
+  discord
 
 
 # Gaming xD
